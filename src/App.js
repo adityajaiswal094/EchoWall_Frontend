@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Loading from "./components/Loading";
 
 const HomePage = React.lazy(() => import("./pages/HomePage"));
 const User = React.lazy(() => import("./pages/User"));
@@ -10,7 +11,7 @@ function App() {
   const { user } = useSelector((state) => state.user);
 
   return (
-    <React.Suspense fallback={<>Loading...</>}>
+    <React.Suspense fallback={<Loading />}>
       <BrowserRouter>
         <Routes>
           <Route path="/user" element={<User />} />
