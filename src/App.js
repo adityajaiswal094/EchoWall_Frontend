@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+const HomePage = React.lazy(() => import("./pages/HomePage"));
+const User = React.lazy(() => import("./pages/User"));
 
 function App() {
+  const { user } = useSelector((state) => state.user);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Suspense fallback={<>Loading...</>}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/user" element={<User />} />
+          <Route path="/home" element={<HomePage />} />
+        </Routes>
+        {user !== "" ? <Navigate to="/home" /> : <Navigate to="/user" />}
+      </BrowserRouter>
+    </React.Suspense>
   );
 }
 
