@@ -5,7 +5,9 @@
 ## About this application
 
 This application mimics the feature of a social media application where you can post text posts and comment on posts as well.
+
 Hosted on: https://echowall.netlify.app/user
+
 P.S.: Backend server is not hosted so this application won't work without running the backend application.
 
 ## Pre-requisites
