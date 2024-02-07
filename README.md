@@ -2,7 +2,7 @@
 
 ## About this application
 
-This application mimics the feature of a social media application where you can post text posts and comment on posts as well.
+This application mimics the feature of a social media application where you can post text based posts and comment on posts as well.
 
 Hosted on: <https://echowall.netlify.app/user>
 
@@ -10,7 +10,7 @@ P.S.: Backend server is not hosted so this application won't work without runnin
 
 ## Pre-requisites
 
-1. Fork this [repository](https://github.com/adityajaiswal094/Kennect_Assignment_Backend) and clone it in your local system.
+1. Fork this [repository](https://github.com/adityajaiswal094/EchoWall_Backend) and clone it in your local system.
 2. Follow the steps documented in this repository to setup the backend server of this application first or else the frontend won't work.
 
 ## Getting Started
